@@ -6,6 +6,11 @@
   "description": "Сохраняем ваше время с 2016",
   "short_name": "АУВ",
 
+  "icons": {
+    "25": "images/25-icon.png",
+    "128": "images/128-icon.png"
+  },
+
   "browser_action": {
     "default_icon": "images/25-icon.png",
     "default_title": "АУВ",

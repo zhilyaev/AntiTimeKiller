@@ -5,12 +5,56 @@
     <link rel="icon" type="image/png" href="images/25-icon.png" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body style=" min-width: 300px;">
+
+<header>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><img src="images/25-icon.png"></a>
+                <p class="navbar-text">AntiTimeKiller 2.0</p>
+            </div>
+
+            <ul class="nav navbar-nav text-center">
+                <li class="active"><a href="options.html">Настройки</a></li>
+                <li><a href="popup.html">Таблица</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
 
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <h1>© Эксперементировал Дмитрий Жиляев 2016 год</h1>
+        <div class="jumbotron">
+            <h1>!</h1>
+            <p>...</p>
+            <p><a class="btn btn-primary btn-lg" role="button">Узнать больше</a></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 alert alert-success">
+            <div class="form-group">
+                <label for="Good">Добавить сайт в положительный список:</label>
+                <div class="input-group">
+                    <input type="url" id="Good" placeholder="https://habrahabr.ru/" class="form-control">
+                     <span class="input-group-btn">
+                         <button class="btn btn-default" type="button">Go!</button>
+                     </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 alert alert-danger">
+            <div class="form-group ">
+                <label for="Bad">Добавить сайт в отрицательный список:</label>
+                <div class="input-group">
+                    <input type="url" id="Bad" placeholder="https://vk.com/" class="form-control">
+                     <span class="input-group-btn">
+                         <button class="btn btn-default" type="button">Go!</button>
+                     </span>
+                </div>
+            </div>
         </div>
     </div>
 </div>

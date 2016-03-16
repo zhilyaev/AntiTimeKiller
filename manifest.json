@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "Анти Убийца Времени",
+  "version": "1.0",
+  //"default_locale": "ru",
+  "description": "Сохраняем ваше время с 2016",
+  "short_name": "АУВ",
+
+  "browser_action": {
+    "default_icon": "images/25-icon.png",
+    "default_title": "АУВ",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [ "*://*/*" ],// Магия регулярных выражений
+      "js": [ "js/each.js" ] // Для каждой страницы, которую я открою подгружать этот скрипт.
+    }
+  ],
+
+  "options_page": "options.html",
+
+  "background": {
+    "persistent": false,
+    "scripts": ["js/background.js"]
+  },
+
+  "permissions": [
+    "tabs", "activeTab" // Разрешить расширению работать с вкладками
+  ]
+}

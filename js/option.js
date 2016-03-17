@@ -7,7 +7,7 @@ function AddRow(id,col1,col2) {
 
     cell1.innerHTML = "<a target='_blank' href='http://"+col1+"'>"+col1+"</a>";
     cell2.innerHTML = "<span class='badge'>"+col2+"</span>";
-    cell3.innerHTML = "<button class='btn btn-default deleter' value='"+col1+"' title='Удалить из списка'><b class='glyphicon glyphicon-remove'></b></button>"
+    cell3.innerHTML = "<button class='btn btn-default deleter' value='"+col1+"' title='Удалить из списка'><b class='glyphicon glyphicon-trash'></b></button>"
 }
 
 function BuildList(id){

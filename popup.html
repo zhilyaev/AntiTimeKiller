@@ -18,9 +18,16 @@
             </div>
 
             <ul class="nav navbar-nav text-center">
-                <li><a href="options.html">Настройки</a></li>
-                <li class="active"><a href="popup.html">Попап</a></li>
+                <li><a href="options.html">
+                    <b class="glyphicon glyphicon-cog"></b> Настройки</a></li>
+                <li class="active"><a href="popup.html"><b class="glyphicon glyphicon-star"></b> Попап</a></li>
+                <li><a href="readme.html"><b class="glyphicon glyphicon-info-sign"></b> Инструкция</a></li>
             </ul>
+
+            <h4 class=" text-center">
+                Аптайм = <span class="label label-primary" id="UpTime"></span>
+            </h4>
+
         </div>
     </nav>
 </header>
@@ -29,9 +36,6 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h3 class="text-right">
-                    Аптайм = <span class="label label-primary" id="UpTime"></span>
-            </h3>
             <div title="Индикатор полезности" class="progress">
                 <div id="status-good" class="progress-bar progress-bar-success" style="width:0%"></div>
                 <div id="status-bad" class="progress-bar progress-bar-danger" style="width: 0%"></div>

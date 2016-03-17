@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+    <title>Инструкция</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="images/25-icon.png" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style=" min-width: 300px;">
+
+
+<header>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><img src="images/25-icon.png"></a>
+                <p class="navbar-text">AntiTimeKiller 2.0</p>
+            </div>
+
+            <ul class="nav navbar-nav text-center">
+                <li><a href="options.html"><b class="glyphicon glyphicon-cog"></b> Настройки</a></li>
+                <li><a href="popup.html"><b class="glyphicon glyphicon-star"></b> Попап</a></li>
+                <li class="active"><a href="readme.html"><b class="glyphicon glyphicon-info-sign"></b> Инструкция</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron">
+                <h1>Привет, друг!</h1>
+                <p> Я рад, что ты установил это расширение.
+                    Если оно тебе понадобилось, значит мои труды уже не напрасны.
+                    Этот проект является частью Open-source мира. Ниже вы сможете как обычно бесплатно скачать исходники.
+                </p>
+                <p><a class="btn btn-primary btn-lg" target="_blank" href="https://github.com/zhilyaev/AntiTimeKiller" role="button">
+                    Исходники на <b class="glyphicon glyphicon-cloud-download"></b> GitHub
+                </a>
+                <a href="#About" class="btn-link btn btn-lg">Кто со мной говорит?</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 well">
+            <h3>Что делает кнопка "Удалить Все записи"?</h3>
+            <p>Эта кнопка в разделе Настройки. Полностью удаляет <b>localstorage</b>. После этого нужно перезапустить фоновый скрипт. Самый простой - для вас вариант просто переустановить расширение.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 well">
+            <h3>Что такое Аптайм ака UpTime?</h3>
+            <p>Это время (в секундах) работы плагина</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 alert alert-warning">
+            <h3>Пожалуйста, аккуратно добавляейте домены в список</h3>
+            <h5>Критерии:</h5>
+            <ul>
+                <li>Отсутсвует "www."</li>
+                <li>Отсутсвует "https://"</li>
+                <li>Отсутсвует "http://"</li>
+                <li>Отсутсвуют лишние слеши "/"</li>
+            </ul>
+            <br>
+            <i>Домен добавляется только по клику на кнопку "+ к списку". Так что будте <b>аккуратны</b></i>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 well">
+            <h3>Уведомление "Это полезный сайт?"</h3>
+            <p>Если вы соглашаетесь, то сайт тут же попадает в "Зеленную зону", Если вы его игнорируте или жмете "отмена", то <b>ничего не просиходит</b>.</p>
+            <p>Это событие появляется только впервую загрузку.
+                Если вы решитесь добавить домен в один из списков, то вы можете это сделать на странице <a href="options.html">настроек</a></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 well">
+            <h3>Что это за полоска в попап?</h3>
+            <p>Это ваше соотнешение между "Зелеными" и "Красными" сайтами. Чем больше зеленного, тем более полезно вы проводите время</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <hr>
+        <div class="container">
+            <p class="text-center lead">При разработке ни одно животное кроме меня не пострадало. Код писался всегда глубокой ночью. Поэтому он полон загадочности и остатков доширака. Я = Студент! Я могу позволить себе это!</p>
+            <div class="row">
+                <div class="col-md-5"><p>
+                    <iframe frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/embed/shop.xml?account=410011681267324&quickpay=shop&payment-type-choice=on&writer=seller&targets=%D0%9D%D0%B0+%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D1%83+%D0%BB%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D0%B8+%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B0+%D0%B8+%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D1%83+%D1%85%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B3%D0%B0&targets-hint=&default-sum=100&button-text=04&comment=on&hint=%D0%92%D0%B0%D1%88%D0%B8+%D0%BF%D0%BE%D0%B6%D0%B5%D0%BB%D0%B0%D0%BD%D0%B8%D1%8F&successURL=" width="450" height="283"></iframe>                </p>
+                </div>
+                <div id="About" class="col-md-3 text-left">
+                    <h4><b class="glyphicon glyphicon-copyright-mark"></b> 2016 год</h4>
+                    <h4  title="aka Diamon"><b class="glyphicon glyphicon-user"></b> Дмитрий Жиляев</h4>
+                    <h4><b class="glyphicon glyphicon-map-marker"></b> Санкт-Петербург</h4>
+                    <h4><a href="mailto:zhilyaev.dmitriy@gmail.com"><b class="glyphicon glyphicon-send"></b> Zhilyaev.Dmitriy@gmail.com</a></h4>
+                    <h4><a href="https://twitter.com/DmitriyZhilyaev"><img src="images/48-Twitter.png" width="22px"> DmitriyZhilyaev</a></h4>
+                    <h4><a href="https://vk.com/dmitriy.zhilyaev"><img src="images/48-vk.png" width="25px"> Dmitriy.Zhilyaev</a></h4>
+                    <h4><a href="https://github.com/zhilyaev"><img src="images/48-github.png" width="22px"> Zhilyaev</a></h4>
+
+                </div>
+                <div class="col-md-4">
+                    <h5>Было использовано:</h5>
+                    <ul>
+                        <li>Bootstrap v 3.3.6</li>
+                        <li>jQuery v 2.2.6</li>
+                        <li>Glyphicons Halflings</li>
+                    </ul>
+                    <img src="images/panda.png">
+                </div>
+            </div>
+        </div>
+</footer>
+
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</html>

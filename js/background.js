@@ -15,7 +15,10 @@ if(!localStorage["BadList"]) localStorage["BadList"] = JSON.stringify([
     "vk.com",
     "youtube.com",
     "twitter.com",
-    "xvideos.com"
+    "xvideos.com",
+    "facebook.com",
+    "instagram.com",
+    "friends-online.co"
 ]);
 
 if(!localStorage["GoodList"])  localStorage["GoodList"] = JSON.stringify([

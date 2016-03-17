@@ -26,7 +26,8 @@ if(!localStorage["BadList"]) localStorage["BadList"] = JSON.stringify([
 if(!localStorage["GoodList"])  localStorage["GoodList"] = JSON.stringify([
     "habrahabr.ru",
     "ru.wikipedia.org",
-    "javarush.ru"
+    "javarush.ru",
+    "github.com"
 ]);
 
 setInterval(function(){

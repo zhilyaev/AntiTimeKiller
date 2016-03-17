@@ -1,3 +1,6 @@
+var good = 0;
+var bad = 0;
+
 function AddRow(id,col1,col2) {
     var table = document.getElementById(id);
     var row = table.insertRow(-1);
@@ -8,6 +11,7 @@ function AddRow(id,col1,col2) {
     for (var i=0;i<lsg.length;i++){
         if(col1==lsg[i]){
             row.classList.add("success");
+            good+=localStorage[col1];
             break;
         }
     }
@@ -15,6 +19,7 @@ function AddRow(id,col1,col2) {
     for (var i=0;i<lsb.length;i++){
         if(col1==lsb[i]){
             row.classList.add("danger");
+            bad+=localStorage[col1];
             break;
         }
     }
@@ -27,9 +32,18 @@ function AddRow(id,col1,col2) {
 
 $("#UpTime").html(localStorage["UpTime"]);
 
-for (var key in localStorage){
-    if(key!=="UpTime" && key!=="GoodList" && key!=="BadList"){
-        //# AddRow("Anal","www.vk.com","8000");
-        AddRow("Anal",key,localStorage[key]);
+
+$(document).ready( function(){
+    for (var key in localStorage){
+        if(key!=="UpTime" && key!=="GoodList" && key!=="BadList"){
+            //# AddRow("Anal","www.vk.com","8000");
+            AddRow("Anal",key,localStorage[key]);
+        }
     }
-}
+
+
+    var all = good+bad;
+    $("#status-good").css({'width': parseInt(good/all)+"%"});
+    $("#status-bad").css({'width': 100-parseInt(good/all)+"%"});
+});
+

@@ -35,8 +35,10 @@ $("#subGood").click(function(){
 });
 
 $("#DeleteLocal").click(function(){
-    if(confirm("После этого действия придется переустанавливать расширение"))
+    if(confirm("После этого действия придется переустанавливать расширение")){
         localStorage.clear();
+    }
+
 });
 
 /* Smoke main every run */

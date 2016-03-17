@@ -1,15 +1,13 @@
 /* Определение функций */
 function onBlur() { // окно теряет фокус
     chrome.runtime.sendMessage({site:sait,time:localStorage[sait]}); // отправка сообщения на background.js
-    //localStorage[sait] = 0;
+    //localStorage[sait] = 0; //Блочим здесь и через год офигеваем от Кеша Хрома
 }
-window.onblur = onBlur; // если окно теряет фокус
+
 
 /* Начальные значения */
 // Баг с www/http/https
-location.host.replace('www.','');
-var sait=location.hostname; // на каком сайте находится скрипт
-
+var sait=window.location.hostname.replace('www.','');
 if(!localStorage[sait]){
     localStorage[sait]=0;
     if(confirm("Это Полезный сайт?")){
@@ -17,10 +15,12 @@ if(!localStorage[sait]){
     }
 }
 
+window.onblur = onBlur; // если окно теряет фокус
+
 /* Smoke main every sec */
 setInterval(function(){
     if(document.webkitVisibilityState == 'visible')//если страница активна
     {
-        localStorage[sait]++; // обновляем данные о сайте в локальном хранилище
+        localStorage[sait]++;
     }
-}, 1000);// запускать функцию каждую секунду
+}, 1000);

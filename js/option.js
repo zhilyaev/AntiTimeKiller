@@ -23,15 +23,17 @@ function BuildList(id){
 $("#subBad").click(function(){
         var h = $("#Bad");
         var lsb = JSON.parse(localStorage["BadList"]);
-        lsb.push(h.val());
+        lsb.push(h.val().replace('www.',''));
         localStorage["BadList"] = JSON.stringify(lsb);
+        location.reload();
 });
 
 $("#subGood").click(function(){
     var h = $("#Good");
     var lsb = JSON.parse(localStorage["GoodList"]);
-    lsb.push(h.val());
+    lsb.push(h.val().replace('www.',''));
     localStorage["GoodList"] = JSON.stringify(lsb);
+    location.reload();
 });
 
 $("#DeleteLocal").click(function(){

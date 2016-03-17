@@ -18,14 +18,15 @@ if(!localStorage["BadList"]) localStorage["BadList"] = JSON.stringify([
     "xvideos.com",
     "facebook.com",
     "instagram.com",
-    "friends-online.co",
-    "pikabu.ru"
+    "pikabu.ru",
+    "ok.ru",
+    "2ch.hk"
 ]);
 
 if(!localStorage["GoodList"])  localStorage["GoodList"] = JSON.stringify([
     "habrahabr.ru",
-    "bootstrap-3.ru",
-    "ru.wikipedia.org"
+    "ru.wikipedia.org",
+    "javarush.ru"
 ]);
 
 setInterval(function(){

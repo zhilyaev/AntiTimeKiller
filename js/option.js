@@ -7,7 +7,7 @@ function AddRow(id,col1,col2) {
 
     cell1.innerHTML = "<a target='_blank' href='http://"+col1+"'>"+col1+"</a>";
     cell2.innerHTML = "<span class='badge'>"+col2+"</span>";
-    cell3.innerHTML = "<button class='btn btn-default deleter' title='Удалить из списка'><b class='glyphicon glyphicon-remove'></b></button>"
+    cell3.innerHTML = "<button class='btn btn-default deleter' value='"+col1+"' title='Удалить из списка'><b class='glyphicon glyphicon-remove'></b></button>"
 }
 
 function BuildList(id){
@@ -53,12 +53,13 @@ $(document).ready(function(){
     BuildList("GoodList");
 
     $("tr").find(".deleter").click(function(){
-        var row = this.parentNode.parentNode;
         var table= this.parentNode.parentNode.parentNode.parentNode;
         var id = table.id;
 
+        var site = this.value;
         var ls = JSON.parse(localStorage[id]);
-        ls.splice(ls.indexOf(row.rowIndex), 1);
+
+        ls.splice(ls.indexOf(site), 1);
         localStorage[id] = JSON.stringify(ls);
         location.reload();
 

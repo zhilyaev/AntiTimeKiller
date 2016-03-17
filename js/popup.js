@@ -32,8 +32,12 @@ function AddRow(id,col1,col2) {
 
 $("#UpTime").html(localStorage["UpTime"]);
 
-
 $(document).ready( function(){
+
+    setInterval(function(){
+        $("#UpTime").html(localStorage["UpTime"]);
+    },1000);
+
     for (var key in localStorage){
         // Зарезеривированные
         if(key!=="UpTime" && key!=="GoodList" && key!=="BadList"){
@@ -49,4 +53,6 @@ $(document).ready( function(){
     $("#status-good").html(good).css({'width': pg+"%"});
     $("#status-bad").html(bad).css({'width':  pb+"%"});
 });
+
+
 

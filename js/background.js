@@ -1,6 +1,13 @@
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
         localStorage[request.site] = request.time;
+
+        // Если мы были первй раз на сайте
+        if(request.grade){
+            var lsg = JSON.parse(localStorage["GoodList"]);
+            lsg.push(request.site);
+            localStorage["GoodList"] = JSON.stringify(lsg);
+        }
     });
 
 if(!localStorage["UpTime"]) localStorage["UpTime"] = 0;

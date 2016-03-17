@@ -8,7 +8,12 @@ window.onblur = onBlur; // если окно теряет фокус
 /* Начальные значения */
 // Баг с www/http/https
 var sait=location.hostname; // на каком сайте находится скрипт
-if(!localStorage[sait]) localStorage[sait]=0;
+if(!localStorage[sait]){
+    localStorage[sait]=0;
+    if(confirm("Это Полезный сайт?")){
+        chrome.runtime.sendMessage({site:sait,grade:true});
+    }
+}
 
 /* Smoke main every sec */
 setInterval(function(){

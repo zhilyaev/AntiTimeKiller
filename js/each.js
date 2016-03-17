@@ -6,10 +6,11 @@ function onBlur() { // окно теряет фокус
 window.onblur = onBlur; // если окно теряет фокус
 
 /* Начальные значения */
+// Баг с www/http/https
 var sait=location.hostname; // на каком сайте находится скрипт
 if(!localStorage[sait]) localStorage[sait]=0;
 
-/* Main every sec */
+/* Smoke main every sec */
 setInterval(function(){
     if(document.webkitVisibilityState == 'visible')//если страница активна
     {

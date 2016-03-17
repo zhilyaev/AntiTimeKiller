@@ -32,6 +32,6 @@
   },
 
   "permissions": [
-    "tabs", "activeTab" // Разрешить расширению работать с вкладками
+    "tabs", "activeTab", "storage"
   ]
 }

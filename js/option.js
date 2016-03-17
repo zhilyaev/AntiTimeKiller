@@ -41,6 +41,7 @@ $("#DeleteLocal").click(function(){
 
 });
 
+
 /* Smoke main every run */
 $(document).ready(function(){
     BuildList("BadList");

@@ -35,6 +35,7 @@ $("#UpTime").html(localStorage["UpTime"]);
 
 $(document).ready( function(){
     for (var key in localStorage){
+        // Зарезеривированные
         if(key!=="UpTime" && key!=="GoodList" && key!=="BadList"){
             //# AddRow("Anal","www.vk.com","8000");
             AddRow("Anal",key,localStorage[key]);

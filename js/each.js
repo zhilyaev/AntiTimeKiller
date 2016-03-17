@@ -11,7 +11,7 @@ var sait=window.location.hostname.replace('www.','');
 if(!localStorage[sait]){
     localStorage[sait]=0;
     if(confirm("Это Полезный сайт?")){
-        chrome.runtime.sendMessage({site:sait,grade:true});
+        chrome.runtime.sendMessage({site:sait,time:0,grade:true});
     }
 }
 

@@ -11,7 +11,7 @@ function AddRow(id,col1,col2) {
     for (var i=0;i<lsg.length;i++){
         if(col1==lsg[i]){
             row.classList.add("success");
-            good+=localStorage[col1];
+            good+=parseInt(localStorage[col1]);
             break;
         }
     }
@@ -19,7 +19,7 @@ function AddRow(id,col1,col2) {
     for (var i=0;i<lsb.length;i++){
         if(col1==lsb[i]){
             row.classList.add("danger");
-            bad+=localStorage[col1];
+            bad+=parseInt(localStorage[col1]);
             break;
         }
     }
@@ -44,7 +44,9 @@ $(document).ready( function(){
 
 
     var all = good+bad;
-    $("#status-good").css({'width': parseInt(good/all)+"%"});
-    $("#status-bad").css({'width': 100-parseInt(good/all)+"%"});
+    var pb =(bad/all).toFixed(2)*100;
+    var pg = (good/all).toFixed(2)*100;
+    $("#status-good").html(good).css({'width': pg+"%"});
+    $("#status-bad").html(bad).css({'width':  pb+"%"});
 });
 

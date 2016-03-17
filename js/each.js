@@ -7,7 +7,9 @@ window.onblur = onBlur; // если окно теряет фокус
 
 /* Начальные значения */
 // Баг с www/http/https
+location.host.replace('www.','');
 var sait=location.hostname; // на каком сайте находится скрипт
+
 if(!localStorage[sait]){
     localStorage[sait]=0;
     if(confirm("Это Полезный сайт?")){

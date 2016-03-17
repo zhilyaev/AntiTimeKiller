@@ -17,8 +17,10 @@
 
             <ul class="nav navbar-nav text-center">
                 <li class="active"><a href="options.html">Настройки</a></li>
-                <li><a href="popup.html">Таблица</a></li>
+                <li><a href="popup.html">Попап</a></li>
             </ul>
+
+            <button type="button" id="DeleteLocal" class="btn btn-warning navbar-btn navbar-right">Удалить Все записи</button>
         </div>
     </nav>
 </header>
@@ -27,34 +29,63 @@
 <div class="container">
     <div class="row">
         <div class="jumbotron">
-            <h1>!</h1>
-            <p>...</p>
-            <p><a class="btn btn-primary btn-lg" role="button">Узнать больше</a></p>
+            <h1>Привет, друг!</h1>
+            <p> Честно скажу, я не смог определится, какую инфу тут повесить,
+                Но и оставлять пустое место я тоже не мог.
+                Я бы поклянчил <b class="glyphicon glyphicon-piggy-bank"></b> Donate мне на печеньки,
+                ибо степухи в 1300 <b class="glyphicon glyphicon-rub"></b> не хватает. Однако, это расширение все равно доберется, только до моих близких друзей.
+                Которые еще не успели полать меня :D</p>
+            <p><a class="btn btn-primary btn-lg" href="https://vk.com/dmitriy.zhilyaev" role="button">Кто этот хрен с горы?</a></p>
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-6 alert alert-success">
             <div class="form-group">
-                <label for="Good">Добавить сайт в положительный список:</label>
+                <label for="Good">Добавить домен в положительный список:</label>
                 <div class="input-group">
-                    <input type="url" id="Good" placeholder="https://habrahabr.ru/" class="form-control">
+                    <input type="url" id="Good" placeholder="ru.wikipedia.org" class="form-control">
                      <span class="input-group-btn">
-                         <button class="btn btn-default" type="button">Go!</button>
+                         <button class="btn btn-default" type="submit" id="subGood">Go!</button>
                      </span>
                 </div>
             </div>
         </div>
         <div class="col-md-6 alert alert-danger">
-            <div class="form-group ">
-                <label for="Bad">Добавить сайт в отрицательный список:</label>
+            <div class="form-group">
+                <label for="Bad">Добавить домен в отрицательный список:</label>
                 <div class="input-group">
-                    <input type="url" id="Bad" placeholder="https://vk.com/" class="form-control">
+                    <input type="url" id="Bad" placeholder="vk.com" class="form-control">
                      <span class="input-group-btn">
-                         <button class="btn btn-default" type="button">Go!</button>
+                         <button type="submit" class="btn btn-default" id="subBad">Go!</button>
                      </span>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 alert alert-success">
+            <table id="GoodList" class="table">
+                <h3 class="text-center">Потратил время с пользой</h3>
+                <thead>
+                <tr>
+                    <th>Сайт</th>
+                    <th>Время</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="col-md-6 alert alert-danger">
+            <table id="BadList" class="table">
+                <h3 class="text-center">Потратил время зря</h3>
+                <thead>
+                <tr>
+                    <th>Сайт</th>
+                    <th>Время</th>
+                </tr>
+                </thead>
+            </table>
         </div>
     </div>
 </div>
@@ -62,4 +93,5 @@
 </body>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/option.js"></script>
 </html>

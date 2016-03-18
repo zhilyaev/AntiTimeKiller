@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Анти Убийца Времени",
-  "version": "2.1",
+  "version": "2.2",
   "description": "Сохраняем ваше время с 2016",
   "short_name": "АУВ",
 
@@ -28,16 +28,15 @@
   "options_page": "options.html",
 
   "background": {
-    "persistent": false,
-    "scripts": ["js/background.js"]
+    "scripts": ["js/background.js", "js/context.js"]
   },
 
   "permissions": [
     "tabs",
     "activeTab",
     "storage",
-    "chrome://favicon/",
     "http://*/*",
-    "https://*/*"
+    "https://*/*",
+    "contextMenus"
   ]
 }

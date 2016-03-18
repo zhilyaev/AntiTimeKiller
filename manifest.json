@@ -33,6 +33,11 @@
   },
 
   "permissions": [
-    "tabs", "activeTab", "storage"
+    "tabs",
+    "activeTab",
+    "storage",
+    "chrome://favicon/",
+    "http://*/*",
+    "https://*/*"
   ]
 }

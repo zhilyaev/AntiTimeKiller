@@ -13,7 +13,7 @@ function AddRow(id,col1,col2) {
 var getDomain = function(href) {
     var l = document.createElement("a");
     l.href = href;
-    return l.replace('www.','');
+    return l.hostname.replace('www.','');
 };
 
 

@@ -10,7 +10,6 @@ chrome.runtime.onMessage.addListener(
         }
     });
 
-if(!localStorage["UpTime"]) localStorage["UpTime"] = 0;
 if(!localStorage["BadList"]) localStorage["BadList"] = JSON.stringify([
     "vk.com",
     "youtube.com",
@@ -30,6 +29,11 @@ if(!localStorage["GoodList"])  localStorage["GoodList"] = JSON.stringify([
     "github.com"
 ]);
 
+
+if(!localStorage["UpTime"]){
+    localStorage["UpTime"] = 0;
+    window.open("readme.html", "_blank");
+}
 setInterval(function(){
     localStorage["UpTime"]++;
-},1000)
+},1000);

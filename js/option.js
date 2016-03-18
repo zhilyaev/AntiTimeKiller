@@ -49,10 +49,11 @@ $("#DeleteLocal").click(function(){
     if(confirm("После этого действия придется переустанавливать расширение, но все равно сохранит твое время!")){
         localStorage.clear();
     }
-
 });
 
-
+$("#DeleteUpTime").click(function(){
+    localStorage['UpTime'] = 0;
+});
 
 /* Smoke main every run */
 $(document).ready(function(){

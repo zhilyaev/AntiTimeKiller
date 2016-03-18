@@ -1,3 +1,4 @@
+// Библиотека
 function in_array(needle, haystack, argStrict) {
 
     var key = '',
@@ -25,26 +26,27 @@ var getDomain = function(href) {
     return l.hostname.replace('www.','');
 };
 
-var addLinkGood = function(e) {
-    var lsb = JSON.parse(localStorage["GoodList"]);
-    var site = getDomain(e.linkUrl);
-    if(!in_array(site,lsb)){
-        lsb.push(site);
+/* Добавить домен в localstorage */
+function addDomain(site, list){
+    var lsb = JSON.parse(localStorage[list]);
+    var domain = getDomain(site);
+    if(!in_array(domain,lsb)){
+        lsb.push(domain);
     }
+    localStorage[list] = JSON.stringify(lsb);
+}
 
-    localStorage["GoodList"] = JSON.stringify(lsb);
+/* <Event for link> */
+var addLinkGood = function(e) {
+    addDomain(e.linkUrl,"GoodList");
 };
 
 var addLinkBad= function(e) {
-    var lsb = JSON.parse(localStorage["BadList"]);
-    var site = getDomain(e.linkUrl);
-    if(!in_array(site,lsb)){
-        lsb.push(site);
-    }
-    localStorage["BadList"] = JSON.stringify(lsb);
+    addDomain(e.linkUrl,"BadList");
 };
+
 chrome.contextMenus.create({
-    "title": "+ в ЗЕЛЕННЫЙ список",
+    "title": "+ в ЗЕЛЕНЫЙ список",
     "contexts": ["link"],
     "onclick" : addLinkGood
 });
@@ -53,4 +55,31 @@ chrome.contextMenus.create({
     "title": "+ в КРАСНЫЙ список",
     "contexts": ["link"],
     "onclick" : addLinkBad
+});
+/* </Event for link> */
+
+function addGoodList(e){
+    chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
+        var url = tabs[0].url;
+        addDomain(url,"GoodList");
+    });
+}
+
+function addBadList(e){
+    chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
+        var url = tabs[0].url;
+        addDomain(url,"BadList");
+    });
+}
+
+chrome.contextMenus.create({
+    "title": "+ Текущий сайт в ЗЕЛЕНЫЙ",
+    "contexts": ["page"],
+    "onclick" : addGoodList
+});
+
+chrome.contextMenus.create({
+    "title": "+ Текущий сайт в КРАСНЫЙ",
+    "contexts": ["page"],
+    "onclick" : addBadList
 });

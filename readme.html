@@ -14,7 +14,7 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#"><img src="images/25-icon.png"></a>
-                <p class="navbar-text">AntiTimeKiller 2.0</p>
+                <p class="navbar-text">AntiTimeKiller 2.1</p>
             </div>
 
             <ul class="nav navbar-nav text-center">
@@ -45,10 +45,57 @@
     </div>
 
     <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="page-header"><i class="
+glyphicon glyphicon-lock"></i> Безопасность</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <div class="caption">
+                    <p>Это расширение не использует ваши куки, сессии или токены к сайтам. Вы можете это проверить в разделе permission</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <div class="caption">
+                    <p>Проект полностью открыт. И весь исходный код вы можете просмотреть на GitHub</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <div class="caption">
+                    <p>Построенно на технологии HTML5 localstorage</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <div class="caption">
+                    <p>Не отправляет ваш анализ на стороние сервера</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="page-header"><i class="glyphicon glyphicon-info-sign"></i> Информация о компонентах</h1>
+        </div>
+        </div>
+
+    <div class="row">
         <div class="col-md-12 well">
-            <h3>Что делает кнопка "Удалить Все записи"?</h3>
-            <p>Эта кнопка в разделе Настройки. Полностью удаляет <b>localstorage</b>. После этого нужно перезапустить фоновый скрипт. Самый простой - для вас вариант просто переустановить расширение.
-            </p>
+            <h3>Что это за полоска в попап?</h3>
+            <div title="Индикатор полезности" class="progress">
+                <div id="status-good" class="progress-bar progress-bar-success" style="width:60%">120</div>
+                <div id="status-bad" class="progress-bar progress-bar-danger" style="width: 40%">80</div>
+            </div>
+            <p>Это ваше соотнешение между <i class="label label-success">"Зелеными"</i> и <i class="label label-danger">"Красными"</i> сайтами. Чем больше зеленного, тем более полезно вы проводите время</p>
         </div>
     </div>
 
@@ -59,25 +106,12 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-12 alert alert-warning">
-            <h3>Пожалуйста, аккуратно добавляейте домены в список</h3>
-            <h5>Критерии:</h5>
-            <ul>
-                <li>Отсутсвует "www."</li>
-                <li>Отсутсвует "https://"</li>
-                <li>Отсутсвует "http://"</li>
-                <li>Отсутсвуют лишние слеши "/"</li>
-            </ul>
-            <br>
-            <i>Домен добавляется только по клику на кнопку "+ к списку". Так что будте <b>аккуратны</b></i>
-        </div>
-    </div>
 
     <div class="row">
         <div class="col-md-12 well">
-            <h3>Уведомление "Это полезный сайт?"</h3>
-            <p>Если вы соглашаетесь, то сайт тут же попадает в "Зеленную зону", Если вы его игнорируте или жмете "отмена", то <b>ничего не просиходит</b>.</p>
+            <h3>Уведомление "Считаете ли вы, что на этом сайте вы проводите время с пользой?"</h3>
+            <img src="images/confirm_example.PNG">
+            <p>Если вы соглашаетесь, то сайт тут же попадает в <i class="label label-success">Зеленную зону</i>, Если вы его игнорируте или жмете <kbd>"отмена"</kbd>, то <b>ничего не просиходит</b>.</p>
             <p>Это событие появляется только впервую загрузку.
                 Если вы решитесь добавить домен в один из списков, то вы можете это сделать на странице <a href="options.html">настроек</a></p>
         </div>
@@ -85,17 +119,18 @@
 
     <div class="row">
         <div class="col-md-12 well">
-            <h3>Что это за полоска в попап?</h3>
-            <p>Это ваше соотнешение между "Зелеными" и "Красными" сайтами. Чем больше зеленного, тем более полезно вы проводите время</p>
+            <h3>Что делает кнопка "Удалить Все записи"?</h3>
+            <p>Эта кнопка в разделе Настройки. Полностью удаляет <b>localstorage</b>. После этого нужно перезапустить фоновый скрипт. Самый простой - для вас вариант просто переустановить расширение.
+            </p><p>Для обнуления всех счетчиков воспользуйтесь <kbd>ctrl + shift + del</kbd> и выберите "удалить информацию о сайтах и плагинах"</p>
         </div>
     </div>
 
 </div>
 
 <footer>
-    <hr>
+    <h1 class="text-center page-header">Кто же я такой?</h1>
         <div class="container">
-            <p class="text-center lead">При разработке ни одно животное кроме меня не пострадало. Код писался всегда глубокой ночью. Поэтому он полон загадочности и остатков доширака. Я = Студент! Я могу позволить себе это!</p>
+            <p class="text-center lead">При разработке ни одно животное кроме меня не пострадало. Код писался всегда глубокой ночью. Поэтому он полон загадочности и остатков доширака. Ниже вы сможете <i class="glyphicon glyphicon-piggy-bank"></i> поддержать проект.</p>
             <div class="row">
                 <div class="col-md-5"><p>
                     <iframe frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/embed/shop.xml?account=410011681267324&quickpay=shop&payment-type-choice=on&writer=seller&targets=%D0%9D%D0%B0+%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D1%83+%D0%BB%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D0%B8+%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B0+%D0%B8+%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D1%83+%D1%85%D0%BE%D1%81%D1%82%D0%B8%D0%BD%D0%B3%D0%B0&targets-hint=&default-sum=100&button-text=04&comment=on&hint=%D0%92%D0%B0%D1%88%D0%B8+%D0%BF%D0%BE%D0%B6%D0%B5%D0%BB%D0%B0%D0%BD%D0%B8%D1%8F&successURL=" width="450" height="283"></iframe>                </p>

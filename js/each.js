@@ -10,7 +10,7 @@ function onBlur() { // окно теряет фокус
 var sait=window.location.hostname.replace('www.','');
 if(!localStorage[sait] || isNaN(localStorage[sait])){
     localStorage[sait]=0;
-    if(confirm("Это Полезный сайт?")){
+    if(confirm("Считаете ли вы, что на этом сайте вы проводите время с пользой?")){
         chrome.runtime.sendMessage({site:sait,time:0,grade:true});
     }
 }

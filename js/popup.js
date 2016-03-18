@@ -47,6 +47,7 @@ $(document).ready( function(){
     }
 
 
+    // Прогресс Бар
     var all = good+bad;
     var pb =(bad/all).toFixed(2)*100;
     var pg = (good/all).toFixed(2)*100;

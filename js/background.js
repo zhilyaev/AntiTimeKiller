@@ -1,12 +1,37 @@
+function in_array(needle, haystack, argStrict) {
+
+    var key = '',
+        strict = !! argStrict;
+
+    if (strict) {
+        for (key in haystack) {
+            if (haystack[key] === needle) {
+                return true;
+            }
+        }
+    } else {
+        for (key in haystack) {
+            if (haystack[key] == needle) {
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
+
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
         localStorage[request.site] = request.time;
 
-        // Если мы были первй раз на сайте
+        // Если мы были первый раз на сайте
         if(request.grade){
             var lsg = JSON.parse(localStorage["GoodList"]);
-            lsg.push(request.site);
-            localStorage["GoodList"] = JSON.stringify(lsg);
+            // Если его нет в начальных списках
+            if(!in_array(request.site,lsg)){
+                lsg.push(request.site);
+                localStorage["GoodList"] = JSON.stringify(lsg);
+            }
         }
     });
 
@@ -19,13 +44,14 @@ if(!localStorage["BadList"]) localStorage["BadList"] = JSON.stringify([
     "instagram.com",
     "pikabu.ru",
     "ok.ru",
-    "2ch.hk"
+    "2ch.hk",
+    "hdrezka.me",
+    "kinogo.co"
 ]);
 
 if(!localStorage["GoodList"])  localStorage["GoodList"] = JSON.stringify([
     "habrahabr.ru",
     "ru.wikipedia.org",
-    "javarush.ru",
     "github.com"
 ]);
 

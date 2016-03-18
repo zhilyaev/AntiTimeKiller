@@ -1,3 +1,24 @@
+function in_array(needle, haystack, argStrict) {
+
+    var key = '',
+        strict = !! argStrict;
+
+    if (strict) {
+        for (key in haystack) {
+            if (haystack[key] === needle) {
+                return true;
+            }
+        }
+    } else {
+        for (key in haystack) {
+            if (haystack[key] == needle) {
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
 function AddRow(id,col1,col2) {
     var table = document.getElementById(id);
     var row = table.insertRow(-1);
@@ -9,6 +30,7 @@ function AddRow(id,col1,col2) {
     cell2.innerHTML = "<span class='badge' title='Время в секундах'>"+col2+"</span>";
     cell3.innerHTML = "<button class='btn btn-default deleter' value='"+col1+"' title='Удалить из списка'><b class='glyphicon glyphicon-trash'></b></button>"
 }
+
 
 var getDomain = function(href) {
     var l = document.createElement("a");
@@ -29,24 +51,36 @@ function BuildList(id){
     }
 }
 
-$("#subBad").click(function(){
-        var h = $("#Bad");
-        var lsb = JSON.parse(localStorage["BadList"]);
-        lsb.push(getDomain(h.val()));
-        localStorage["BadList"] = JSON.stringify(lsb);
+function addList(list){
+    var url = $("#"+list).val();
+    var ls = JSON.parse(localStorage[list+"List"]);
+
+    if (!/^((?:(?:(?:\w[\.\-\+]?)*)\w)+)((?:(?:(?:\w[\.\-\+]?){0,62})\w)+)\.(\w{2,6})$/.test(url)){
+        var domain = getDomain(url);
+        if(!in_array(domain,ls)){
+            ls.push(domain);
+            localStorage[list+"List"] = JSON.stringify(ls);
+            location.reload();
+        }
+    }else{
+        ls.push(url);
+        localStorage[list+"List"] = JSON.stringify(ls);
         location.reload();
+    }
+
+
+}
+
+$("#subBad").click(function(){
+        addList("Bad")
 });
 
 $("#subGood").click(function(){
-    var h = $("#Good");
-    var lsb = JSON.parse(localStorage["GoodList"]);
-    lsb.push(getDomain(h.val()));
-    localStorage["GoodList"] = JSON.stringify(lsb);
-    location.reload();
+    addList("Good");
 });
 
 $("#DeleteLocal").click(function(){
-    if(confirm("После этого действия придется переустанавливать расширение, но все равно сохранит твое время!")){
+    if(confirm("После этого действия придется перезапустить расширение!")){
         localStorage.clear();
     }
 });

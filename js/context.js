@@ -32,8 +32,9 @@ function addDomain(site, list){
     var domain = getDomain(site);
     if(!in_array(domain,lsb)){
         lsb.push(domain);
+        localStorage[list] = JSON.stringify(lsb);
     }
-    localStorage[list] = JSON.stringify(lsb);
+
 }
 
 /* <Event for link> */

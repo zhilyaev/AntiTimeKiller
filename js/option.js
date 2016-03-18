@@ -10,6 +10,13 @@ function AddRow(id,col1,col2) {
     cell3.innerHTML = "<button class='btn btn-default deleter' value='"+col1+"' title='Удалить из списка'><b class='glyphicon glyphicon-trash'></b></button>"
 }
 
+var getDomain = function(href) {
+    var l = document.createElement("a");
+    l.href = href;
+    return l.replace('www.','');
+};
+
+
 function BuildList(id){
     var lsg = JSON.parse(localStorage[id]);
     for (var i=0;i<lsg.length;i++){
@@ -25,7 +32,7 @@ function BuildList(id){
 $("#subBad").click(function(){
         var h = $("#Bad");
         var lsb = JSON.parse(localStorage["BadList"]);
-        lsb.push(h.val().replace('www.',''));
+        lsb.push(getDomain(h.val()));
         localStorage["BadList"] = JSON.stringify(lsb);
         location.reload();
 });
@@ -33,7 +40,7 @@ $("#subBad").click(function(){
 $("#subGood").click(function(){
     var h = $("#Good");
     var lsb = JSON.parse(localStorage["GoodList"]);
-    lsb.push(h.val().replace('www.',''));
+    lsb.push(getDomain(h.val()));
     localStorage["GoodList"] = JSON.stringify(lsb);
     location.reload();
 });

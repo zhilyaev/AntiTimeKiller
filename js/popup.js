@@ -26,7 +26,7 @@ function AddRow(id,col1,col2) {
 
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
-    cell1.innerHTML = col1;
+    cell1.innerHTML = "<a target='_blank' href='http://"+col1+"'>"+col1+"</a>";
     cell2.innerHTML = "<b class='badge'>"+col2+"</b>";
 }
 

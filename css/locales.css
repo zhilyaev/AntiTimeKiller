@@ -1,0 +1,21 @@
+.app_name:after {   content: "__MSG_app_name__";  }
+.app_description:after {content: "__MSG_app_description__";}
+.app_shortname:after {  content: "__MSG_app_shortname__";  }
+.settings_caption:after {content: "__MSG_settings_caption__";}
+.popup_caption:after {content: "__MSG_popup_caption__";}
+.info_caption:after {content: "__MSG_info_caption__";}
+.uptime:after {content: "__MSG_uptime__";}
+.site:after {content: "__MSG_site__";}
+.in_list:after {content: "__MSG_in_list__";}
+.time:after {content: "__MSG_time__";}
+.delete:after {content: "__MSG_delete__";}
+.delete_title:after {content: "__MSG_delete_title__";}
+.reUptime:after {content: "__MSG_reUptime__";}
+.localstorage_caption:after {content: "__MSG_localstorage_caption__";}
+.Goodlist_caption:after {content: "__MSG_Goodlist_caption__";}
+.Badlist_caption:after {content: "__MSG_Badlist_caption__";}
+.Goodlabel:after {content: "__MSG_Goodlabel__";}
+.Badlabel:after {content: "__MSG_Badlabel__";}
+.addtolist_title:after {content: "__addtolist_title__";}
+
+

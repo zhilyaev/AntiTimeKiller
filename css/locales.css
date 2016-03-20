@@ -1,4 +1,5 @@
-.app_name:after {   content: "__MSG_app_name__";  }
+.app_version:after {content: "__MSG_app_version__";}
+.app_name:before {   content: "__MSG_app_name__";  }
 .app_description:after {content: "__MSG_app_description__";}
 .app_shortname:after {  content: "__MSG_app_shortname__";  }
 .settings_caption:after {content: "__MSG_settings_caption__";}
@@ -16,6 +17,7 @@
 .Badlist_caption:after {content: "__MSG_Badlist_caption__";}
 .Goodlabel:before {content: "__MSG_Goodlabel__";}
 .Badlabel:before {content: "__MSG_Badlabel__";}
-.addtolist_title:after {content: "__addtolist_title__";}
+.addtolist_title:after {content: "__MSG_addtolist_title__";}
+
 
 

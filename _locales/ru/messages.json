@@ -1,4 +1,5 @@
 {
+  "app_version" : {"message": "2.3"},
   "app_name" : {"message": "Анти Убийца Времени"},
   "app_description" : {"message": "Помогает анализировать время в сети"},
   "app_shortname" : {"message": "АУВ"},

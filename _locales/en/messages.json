@@ -1,0 +1,5 @@
+{
+  "app_name" : {"message": "Anti Time Killer"},
+  "app_description" : {"message": "Helps analyze time in the Internet"},
+  "app_shortname" : {"message": "ATK"}
+}

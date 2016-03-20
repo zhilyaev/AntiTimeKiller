@@ -1,9 +1,10 @@
 {
   "manifest_version": 2,
-  "name": "Анти Убийца Времени",
-  "version": "2.2",
-  "description": "Сохраняем ваше время с 2016",
-  "short_name": "АУВ",
+  "name": "__MSG_app_name__",
+  "description": "__MSG_app_description__",
+  "short_name": "__MSG_app_shortname__",
+
+  "version": "2.3",
 
   "icons": {
     "16": "images/16-icon.png",
@@ -14,7 +15,6 @@
 
   "browser_action": {
     "default_icon": "images/25-icon.png",
-    "default_title": "АУВ",
     "default_popup": "popup.html"
   },
 

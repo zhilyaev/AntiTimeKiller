@@ -18,11 +18,11 @@
             </div>
 
             <ul class="nav navbar-nav text-center">
-                <li class="active"><a href="options.html"><b class="glyphicon glyphicon-cog"></b> Настройки</a></li>
-                <li><a href="popup.html"><b class="glyphicon glyphicon-star"></b> Попап</a></li>
-                <li><a target="_blank"  href="readme.html"><b class="glyphicon glyphicon-info-sign"></b> Инструкция</a></li>
+                <li class="active"><a class="settings_caption" href="options.html"><b class="glyphicon glyphicon-cog"></b> </a></li>
+                <li><a class="popup_caption" href="popup.html"><b class="glyphicon glyphicon-star"></b> </a></li>
+                <li><a class="info_caption" href="readme.html"><b class="glyphicon glyphicon-info-sign"></b> </a></li>
             </ul>
-            <button type="button" id="DeleteLocal" class="btn btn-danger navbar-btn navbar-right" title="localstorage.clear">Удалить Все записи</button>
+            <button type="button" id="DeleteLocal" class="btn btn-danger navbar-btn navbar-right localstorage_caption" title="localstorage.clear"></button>
             <button type="button" id="DeleteUpTime" class="btn btn-warning navbar-btn navbar-right" title="Обнулить переменную">UpTime = 0</button>
         </div>
     </nav>
@@ -34,24 +34,25 @@
     <div title="Пожалуйста аккуратно добавляйте домены в список" class="row">
         <div class="col-md-6 alert alert-success">
             <div class="form-group">
-                <label for="Good">Добавить домен в положительный список:</label>
+                <label for="Good" class="Goodlabel">:</label>
                 <div class="input-group">
                     <input type="url" id="Good" placeholder="ru.wikipedia.org" class="form-control">
                      <span class="input-group-btn">
                          <button class="btn btn-default" type="submit" id="subGood"><b class="glyphicon glyphicon-plus
-glyphicon"></b> в список</button>
+glyphicon"></b> <span class="in_list"></span></button>
                      </span>
                 </div>
             </div>
         </div>
         <div class="col-md-6 alert alert-danger">
             <div class="form-group">
-                <label for="Bad">Добавить домен в отрицательный список:</label>
+                <label for="Bad" class="Badlabel">:</label>
                 <div class="input-group">
                     <input type="url" id="Bad" placeholder="vk.com" class="form-control">
                      <span class="input-group-btn">
-                         <button type="submit" class="btn btn-default" id="subBad"><b class="glyphicon glyphicon-plus
-glyphicon"></b> в список</button>
+                         <button type="submit" class="btn btn-default" id="subBad">
+                             <b class="glyphicon glyphicon-plus glyphicon"></b>
+                         <span class="in_list"></span> </button>
                      </span>
                 </div>
             </div>
@@ -61,24 +62,24 @@ glyphicon"></b> в список</button>
     <div class="row">
         <div class="col-md-6 alert alert-success">
             <table id="GoodList" class="table">
-                <h3 class="text-center">Потратил время с пользой</h3>
+                <h3 class="text-center Goodlist_caption"></h3>
                 <thead>
                 <tr>
-                    <th>Сайт</th>
-                    <th>Время</th>
-                    <th>Удалить</th>
+                    <th class="site"></th>
+                    <th class="time"></th>
+                    <th class="delete"></th>
                 </tr>
                 </thead>
             </table>
         </div>
         <div class="col-md-6 alert alert-danger">
             <table id="BadList" class="table">
-                <h3 class="text-center">Потратил время зря</h3>
+                <h3 class="text-center Badlist_caption"></h3>
                 <thead>
                 <tr>
-                    <th>Сайт</th>
-                    <th>Время</th>
-                    <th>Удалить</th>
+                    <th class="site"></th>
+                    <th class="time"></th>
+                    <th class="delete"></th>
                 </tr>
                 </thead>
             </table>

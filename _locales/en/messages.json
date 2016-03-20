@@ -1,5 +1,20 @@
 {
   "app_name" : {"message": "Anti Time Killer"},
   "app_description" : {"message": "Helps analyze time in the Internet"},
-  "app_shortname" : {"message": "ATK"}
+  "app_shortname" : {"message": "ATK"},
+  "popup_caption" : {"message": "Popup"},
+  "info_caption" : {"message": "Info"},
+  "uptime" : {"message": "UpTime"},
+  "site" : {"message": "Domain"},
+  "in_list" : {"message": "in list"},
+  "time" : {"message": "Time"},
+  "delete" : {"message": "Delete"},
+  "delete_title" : {"message": "Delete from list"},
+  "reUptime" : {"message": "Reset variable"},
+  "localstorage_caption" : {"message": "Clear all"},
+  "Goodlist_caption":{"message": "Spented time"},
+  "Badlist_caption":{"message": "Wasted time"},
+  "Goodlabel":{"message": "Add domain in useful list"},
+  "Badlabel":{"message": "Add domain in unwholesome list"},
+  "addtolist_title":{"message": "Please, Correct domain"}
 }

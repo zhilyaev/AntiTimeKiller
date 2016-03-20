@@ -1,5 +1,21 @@
 {
   "app_name" : {"message": "Анти Убийца Времени"},
   "app_description" : {"message": "Помогает анализировать время в сети"},
-  "app_shortname" : {"message": "АУВ"}
+  "app_shortname" : {"message": "АУВ"},
+  "settings_caption" : {"message": "Настройки"},
+  "popup_caption" : {"message": "Попап"},
+  "info_caption" : {"message": "Инструкция"},
+  "uptime" : {"message": "Аптайм"},
+  "site" : {"message": "Домен"},
+  "in_list" : {"message": "в список"},
+  "time" : {"message": "Время"},
+  "delete" : {"message": "Удалить"},
+  "delete_title" : {"message": "Удалить из списка"},
+  "reUptime" : {"message": "Обнулить переменную"},
+  "localstorage_caption" : {"message": "Удалить все записи"},
+  "Goodlist_caption":{"message": "Потратил время с пользой"},
+  "Badlist_caption":{"message": "Потратил время зря"},
+  "Goodlabel":{"message": "Добавить домен в положительный список"},
+  "Badlabel":{"message": "Добавить домен в отрицательный список"},
+  "addtolist_title":{"message": "Пожалуйста аккуратно добавляйте домены в список"}
 }

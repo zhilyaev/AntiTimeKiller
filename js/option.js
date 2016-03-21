@@ -81,7 +81,7 @@ $("#subGood").click(function(){
 });
 
 $("#DeleteLocal").click(function(){
-    if(confirm("После этого действия придется перезапустить расширение!")){
+    if(confirm(chrome.i18n.getMessage("localstorage_alert"))){
         localStorage.clear();
     }
 });

@@ -27,8 +27,9 @@ function AddRow(id,col1,col2) {
     var cell3 = row.insertCell(2);
 
     cell1.innerHTML = "<a target='_blank' href='http://"+col1+"'>"+col1+"</a>";
-    cell2.innerHTML = "<span class='badge' title='Время в секундах'>"+col2+"</span>";
-    cell3.innerHTML = "<button class='btn btn-default deleter' value='"+col1+"' title='Удалить из списка'><b class='glyphicon glyphicon-trash'></b></button>"
+    cell2.innerHTML = "<span class='badge'>"+col2+"</span>";
+    cell3.innerHTML = "<button class='btn btn-default deleter' value='"+col1+"' title='"+chrome.i18n.getMessage("delete_title")+"'>" +
+        "<b class='glyphicon glyphicon-trash'></b></button>"
 }
 
 

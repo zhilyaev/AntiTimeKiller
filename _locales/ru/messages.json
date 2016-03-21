@@ -1,5 +1,5 @@
 {
-  "app_version" : {"message": "2.3"},
+  "app_version" : {"message": "2.3 рус"},
   "app_name" : {"message": "Анти Убийца Времени"},
   "app_description" : {"message": "Помогает анализировать время в сети"},
   "app_shortname" : {"message": "АУВ"},
@@ -7,6 +7,8 @@
   "popup_caption" : {"message": "Попап"},
   "info_caption" : {"message": "Инструкция"},
   "uptime" : {"message": "Аптайм"},
+  "year" : {"message": "год"},
+  "localstorage_alert" : {"message": "После этого действия придется перезапустить расширение!"},
   "site" : {"message": "Домен"},
   "in_list" : {"message": "в список"},
   "time" : {"message": "Время"},

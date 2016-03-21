@@ -47,13 +47,13 @@ var addLinkBad= function(e) {
 };
 
 chrome.contextMenus.create({
-    "title": "+ в ЗЕЛЕНЫЙ список",
+    "title": chrome.i18n.getMessage("context_current_link_good"),
     "contexts": ["link"],
     "onclick" : addLinkGood
 });
 
 chrome.contextMenus.create({
-    "title": "+ в КРАСНЫЙ список",
+    "title": chrome.i18n.getMessage("context_current_link_bad"),
     "contexts": ["link"],
     "onclick" : addLinkBad
 });
@@ -74,13 +74,13 @@ function addBadList(e){
 }
 
 chrome.contextMenus.create({
-    "title": "+ Текущий сайт в ЗЕЛЕНЫЙ",
+    "title": chrome.i18n.getMessage("context_current_site_good"),
     "contexts": ["page"],
     "onclick" : addGoodList
 });
 
 chrome.contextMenus.create({
-    "title": "+ Текущий сайт в КРАСНЫЙ",
+    "title": chrome.i18n.getMessage("context_current_site_bad"),
     "contexts": ["page"],
     "onclick" : addBadList
 });

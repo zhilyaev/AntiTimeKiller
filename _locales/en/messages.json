@@ -19,5 +19,9 @@
   "Badlist_caption":{"message": "Wasted time"},
   "Goodlabel":{"message": "Add domain in useful list"},
   "Badlabel":{"message": "Add domain in unwholesome list"},
+  "context_current_site_good" : {"message": "+ current link in GREEN"},
+  "context_current_site_bad" : {"message": "+ current link in RED"},
+  "context_current_link_good" : {"message": "+ in GREEN"},
+  "context_current_link_bad" : {"message": "+ in RED"},
   "addtolist_title":{"message": "Please, Correct domain"}
 }

@@ -20,5 +20,9 @@
   "Badlist_caption":{"message": "Потратил время зря"},
   "Goodlabel":{"message": "Добавить домен в положительный список"},
   "Badlabel":{"message": "Добавить домен в отрицательный список"},
+  "context_current_site_good" : {"message": "+ Текущий сайт в ЗЕЛЕНЫЙ"},
+  "context_current_site_bad" : {"message": "+ Текущий сайт в КРАСНЫЙ"},
+  "context_current_link_good" : {"message": "+ в ЗЕЛЕНЫЙ"},
+  "context_current_link_bad" : {"message": "+ в КРАСНЫЙ"},
   "addtolist_title":{"message": "Пожалуйста аккуратно добавляйте домены в список"}
 }

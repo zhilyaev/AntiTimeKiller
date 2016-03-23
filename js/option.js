@@ -1,3 +1,14 @@
+function easyDate(sec){
+    var a = sec;
+    d=Math.floor(a/86400);
+    a-=86400*d;
+    h=Math.floor(a/3600);
+    a-=3600*h;
+    m=Math.floor(a/60);if(m<10){m='0'+m}
+    s=a-60*m;if(s<10){s='0'+s}
+    return d+" "+h+":"+m+":"+s;
+}
+
 function AddRow(id,col1,col2) {
     var table = document.getElementById(id);
     var row = table.insertRow(-1);
@@ -6,7 +17,7 @@ function AddRow(id,col1,col2) {
     var cell3 = row.insertCell(2);
 
     cell1.innerHTML = "<a target='_blank' href='http://"+col1+"'>"+col1+"</a>";
-    cell2.innerHTML = "<span class='badge'>"+col2+"</span>";
+    cell2.innerHTML = "<span class='badge'>"+easyDate(col2)+"</span>";
     cell3.innerHTML = "<button class='btn btn-default deleter' value='"+col1+"' title='"+chrome.i18n.getMessage("delete_title")+"'>" +
         "<b class='glyphicon glyphicon-trash'></b></button>"
 }

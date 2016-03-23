@@ -6,7 +6,6 @@ function onBlur() { // окно теряет фокус
 
 
 /* Начальные значения */
-// Баг с www/http/https
 var sait=window.location.hostname.replace('www.','');
 if(!localStorage[sait] || isNaN(localStorage[sait])){
     localStorage[sait]=0;

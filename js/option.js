@@ -1,24 +1,3 @@
-function in_array(needle, haystack, argStrict) {
-
-    var key = '',
-        strict = !! argStrict;
-
-    if (strict) {
-        for (key in haystack) {
-            if (haystack[key] === needle) {
-                return true;
-            }
-        }
-    } else {
-        for (key in haystack) {
-            if (haystack[key] == needle) {
-                return true;
-            }
-        }
-    }
-
-    return false;
-}
 function AddRow(id,col1,col2) {
     var table = document.getElementById(id);
     var row = table.insertRow(-1);
@@ -56,9 +35,10 @@ function addList(list){
     var url = $("#"+list).val();
     var ls = JSON.parse(localStorage[list+"List"]);
 
+    // Magic regexp dont touch
     if (!/^((?:(?:(?:\w[\.\-\+]?)*)\w)+)((?:(?:(?:\w[\.\-\+]?){0,62})\w)+)\.(\w{2,6})$/.test(url)){
         var domain = getDomain(url);
-        if(!in_array(domain,ls)){
+        if($.inArray(domain,ls)!==-1){
             ls.push(domain);
             localStorage[list+"List"] = JSON.stringify(ls);
             location.reload();
@@ -72,23 +52,14 @@ function addList(list){
 
 }
 
-$("#subBad").click(function(){
-        addList("Bad")
-});
-
-$("#subGood").click(function(){
-    addList("Good");
-});
-
+$("#subBad").click(function(){addList("Bad")});
+$("#subGood").click(function(){addList("Good");});
 $("#DeleteLocal").click(function(){
     if(confirm(chrome.i18n.getMessage("localstorage_alert"))){
         localStorage.clear();
     }
 });
-
-$("#DeleteUpTime").click(function(){
-    localStorage['UpTime'] = 0;
-});
+$("#DeleteUpTime").click(function(){localStorage['UpTime'] = 0;});
 
 /* Smoke main every run */
 $(document).ready(function(){

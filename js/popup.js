@@ -9,7 +9,7 @@ function easyDate(sec){
     a-=3600*h;
     m=Math.floor(a/60);if(m<10){m='0'+m}
     s=a-60*m;if(s<10){s='0'+s}
-    return d+" "+h+":"+m+":"+s;
+    return (d!==0) ? d+" "+h+":"+m+":"+s  : " "+h+":"+m+":"+s;
 }
 
 function AddRow(id,col1,col2) {

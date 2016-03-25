@@ -3,7 +3,7 @@ BadList and GoodList of domain, which help you analyze your time in the Internet
 
 mission project: show abilities **localstorage HTML5** in chrome extension
 
-(https://chrome.google.com/webstore/detail/%D0%B0%D0%BD%D1%82%D0%B8-%D1%83%D0%B1%D0%B8%D0%B9%D1%86%D0%B0-%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%B8/jhaflmakkilhdgjheopncogdhhhilcob) ![chrome extension](http://4.bp.blogspot.com/-v4dhspFkLA4/UDNK9r_3DBI/AAAAAAAAAes/2h_xjPG0-dw/s1600/chrome_web_store.png)
+[](https://chrome.google.com/webstore/detail/%D0%B0%D0%BD%D1%82%D0%B8-%D1%83%D0%B1%D0%B8%D0%B9%D1%86%D0%B0-%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%B8/jhaflmakkilhdgjheopncogdhhhilcob) ![chrome extension](http://4.bp.blogspot.com/-v4dhspFkLA4/UDNK9r_3DBI/AAAAAAAAAes/2h_xjPG0-dw/s1600/chrome_web_store.png)
 
 ## Future project
 To date, the project has grown up from localstorage. 

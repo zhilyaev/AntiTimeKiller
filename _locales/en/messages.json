@@ -3,6 +3,7 @@
   "app_name" : {"message": "Anti Time Killer"},
   "app_description" : {"message": "Helps analyze time in the Internet"},
   "app_shortname" : {"message": "ATK"},
+  "settings_caption" : {"message": "Settings"},
   "popup_caption" : {"message": "Popup"},
   "info_caption" : {"message": "Info"},
   "uptime" : {"message": "UpTime"},
@@ -23,5 +24,8 @@
   "context_current_site_bad" : {"message": "+ current link in RED"},
   "context_current_link_good" : {"message": "+ in GREEN"},
   "context_current_link_bad" : {"message": "+ in RED"},
+  "grade" : {"message": "Do you feel that you spend time with benefits on this site?"},
+  "go_deal" : {"message": "Go work,lazybones!"},
+  "quota" : {"message": "Time limit is exhausted"},
   "addtolist_title":{"message": "Please, Correct domain"}
 }

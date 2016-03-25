@@ -24,5 +24,8 @@
   "context_current_site_bad" : {"message": "+ Текущий сайт в КРАСНЫЙ"},
   "context_current_link_good" : {"message": "+ в ЗЕЛЕНЫЙ"},
   "context_current_link_bad" : {"message": "+ в КРАСНЫЙ"},
+  "grade" : {"message": "Считаете ли вы, что на этом сайте вы проводите время с пользой?"},
+  "go_deal" : {"message": "Займись чем нибудь полезным, лентяй!"},
+  "quota" : {"message": "Квота времени на сайт закончилась"},
   "addtolist_title":{"message": "Пожалуйста аккуратно добавляйте домены в список"}
 }

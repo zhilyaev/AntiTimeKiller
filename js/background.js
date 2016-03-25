@@ -20,17 +20,6 @@ function in_array(needle, haystack, argStrict) {
     return false;
 }
 
-function wlist(sait){
-    var lsg = JSON.parse(localStorage["GoodList"]);
-    var lsb = JSON.parse(localStorage["BadList"]);
-    if(!in_array(site,lsg)){
-        return 1;
-    }else if(!in_array(site,lsb)){
-        return -1;
-    }
-    else return 0;
-}
-
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
 
@@ -49,7 +38,7 @@ chrome.runtime.onMessage.addListener(
         }
         // Получить из background
         else if(request.method=="wlist")
-            sendResponse({data: wlist(request.domain)});
+            sendResponse({goodlist: localStorage["GoodList"], badlist: localStorage["BadList"]});
 
     });
 

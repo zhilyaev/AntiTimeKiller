@@ -1,24 +1,64 @@
 /* Определение функций */
+function in_array(needle, haystack, argStrict) {
+
+    var key = '',
+        strict = !! argStrict;
+
+    if (strict) {
+        for (key in haystack) {
+            if (haystack[key] === needle) {
+                return true;
+            }
+        }
+    } else {
+        for (key in haystack) {
+            if (haystack[key] == needle) {
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
+function formatDate(date) {
+
+    var dd = date.getDate();
+    if (dd < 10) dd = '0' + dd;
+
+    var mm = date.getMonth() + 1;
+    if (mm < 10) mm = '0' + mm;
+
+    var yy = date.getFullYear() % 100;
+    if (yy < 10) yy = '0' + yy;
+
+    return dd + '.' + mm + '.' + yy;
+}
 function onBlur() { // окно теряет фокус
     chrome.runtime.sendMessage({method: "onBlur",site:sait,time:localStorage[sait]}); // отправка сообщения на background.js
     //localStorage[sait] = 0; //Блочим здесь и через год офигеваем от Кеша Хрома
-    session = 0;
 }
 
 
 var sait=window.location.hostname.replace('www.','');
+
 var useful;
-chrome.runtime.sendMessage({method: "wlist", domain: sait}, function(response) {
-    useful = response.data;
+chrome.runtime.sendMessage({method: "wlist"}, function(response) {
+        var lsg = JSON.parse(response.goodlist);
+        var lsb = JSON.parse(response.badlist);
+        if(!in_array(sait,lsg)){
+            useful = 1;
+        }else if(!in_array(sait,lsb)){
+            useful = -1;
+        }
+        else useful = 0;
 });
-var session = 0;
 /* Начальные значения */
 if(!localStorage[sait] || isNaN(localStorage[sait])){
     localStorage[sait]=0;
 }
 // Начинается новый день и машины туда сюда
-if(localStorage['today']!==new Date()){
-    localStorage['today'] = new Date();
+if(localStorage['today']!==formatDate(new Date())){
+    localStorage['today'] = formatDate(new Date());
     localStorage['session_time'] = 0;
 }
 
@@ -30,7 +70,6 @@ setInterval(function(){
     {
 
         localStorage[sait]++;
-        session++;
         localStorage['session_time']++;
         // Дать пользователю 30 сек, чтобы определить нужен ли ему этот сайт?
         if(localStorage[sait]==30 && useful==0){
@@ -40,12 +79,12 @@ setInterval(function(){
         }
 
         // Если сидим на одном сайте в течении 20 минут
-        if(useful==-1 && session>1200){
+        if(useful==-1 && localStorage['session_time']>1200){
             alert(chrome.i18n.getMessage("go_deal"));
         }
 
-        // Если мы сидим подряд 30 минут или за день 2 часа
-        if(useful==-1 && session>1800 || localStorage['session_time']>7200){
+        // Если мы сидим за день 2 часа
+        if(useful==-1 && localStorage['session_time']>7200){
             document.write("<h1>"+chrome.i18n.getMessage("quota")+"</h1>");
         }
     }

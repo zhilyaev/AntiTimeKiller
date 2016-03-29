@@ -31,3 +31,5 @@ version 2.1
 + new readme
 
 ## Enjoy it!
+
+# PROJECT IS CLOSED

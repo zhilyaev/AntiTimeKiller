@@ -45,9 +45,9 @@ var useful;
 chrome.runtime.sendMessage({method: "wlist"}, function(response) {
         var lsg = JSON.parse(response.goodlist);
         var lsb = JSON.parse(response.badlist);
-        if(!in_array(sait,lsg)){
+        if(in_array(sait,lsg)){
             useful = 1;
-        }else if(!in_array(sait,lsb)){
+        }else if(in_array(sait,lsb)){
             useful = -1;
         }
         else useful = 0;
@@ -79,12 +79,12 @@ setInterval(function(){
         }
 
         // Если сидим на одном сайте в течении 20 минут
-        if(useful==-1 && localStorage['session_time']>1200){
+        if(useful==-1 && localStorage['session_time']==1800){
             alert(chrome.i18n.getMessage("go_deal"));
         }
 
         // Если мы сидим за день 2 часа
-        if(useful==-1 && localStorage['session_time']>7200){
+        if(useful==-1 && localStorage['session_time']==7200){
             document.write("<h1>"+chrome.i18n.getMessage("quota")+"</h1>");
         }
     }
